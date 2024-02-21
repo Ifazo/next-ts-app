@@ -1,6 +1,9 @@
 module.exports = {
   env: {
+    BASE_URL: process.env.BASE_URL,
     BACKEND_URL: process.env.BACKEND_URL,
+    AUTH_URL: process.env.AUTH_URL,
+    AUTH_SECRET: process.env.AUTH_SECRET,
   },
   images: {
     remotePatterns: [

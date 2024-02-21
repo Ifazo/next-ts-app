@@ -11,9 +11,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { toast } from "react-hot-toast";
 import { useAppDispatch } from "@/store/hook";
-import { setUser } from "@/store/features/user/User";
+import { setUser } from "@/store/features/user/userSlice";
 import { signOut } from "next-auth/react";
-import logo from "../../public/logo.png"
+import { Session } from "next-auth";
 
 const navigation = {
     categories: [
@@ -89,11 +89,13 @@ function classNames(...classes: string[]) {
     return classes.filter(Boolean).join(" ");
 }
 
-export default function Header({ session }: { session: any }) {
-    const [ open, setOpen ] = useState(false);
-    console.log(session)
+export default function Header({ session }: { session: Session | null }) {
+
+    const [open, setOpen] = useState(false);
+    // console.log('Welcome', session?.user.name)
     const dispatch = useAppDispatch()
     dispatch(setUser(session))
+
     return (
         <div className="bg-white">
             {/* Mobile menu */}
@@ -265,7 +267,7 @@ export default function Header({ session }: { session: any }) {
                                     width={64}
                                     height={64}
                                     className="h-16 w-auto"
-                                    src={logo}
+                                    src='next.svg'
                                     alt="logo"
                                 />
                             </Link>

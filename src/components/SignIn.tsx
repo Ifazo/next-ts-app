@@ -1,5 +1,5 @@
 'use client'
-import { setUser } from "@/store/features/user/User";
+import { setUser } from "@/store/features/user/userSlice";
 import { useAppDispatch } from "@/store/hook";
 import { signIn } from "next-auth/react";
 import Image from "next/image";
@@ -110,7 +110,7 @@ export default function SignIn() {
                             </button>
                         </div>
                     </form>
-                    
+
                     {/* <div className="flex justify-between">
                         <button
                             type="button"

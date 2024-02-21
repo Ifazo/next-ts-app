@@ -22,7 +22,7 @@ export default async function Home() {
   return (
     <main>
       <Hero />
-      <CategoryPreview data={categories?.data}/>
+      {/* <CategoryPreview data={categories?.data}/> */}
       <Ongoing data={ongoingService?.data} />
       <Upcoming data={upcomingService?.data} />
       <Ended data={endedService?.data} />

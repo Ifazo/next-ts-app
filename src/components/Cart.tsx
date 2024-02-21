@@ -3,7 +3,7 @@ import { Dialog, Transition } from '@headlessui/react'
 import { XIcon } from '@heroicons/react/outline'
 import Image from 'next/image'
 import { useAppDispatch, useAppSelector } from '@/store/hook'
-import { clearProducts, removeProduct } from '@/store/features/cart/Cart'
+import { clearProducts, removeProduct } from '@/store/features/cart/cartSlice'
 import { IService } from '@/types'
 
 const products = [

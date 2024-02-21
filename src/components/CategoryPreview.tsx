@@ -26,8 +26,8 @@ const categories = [
     { name: 'Sale', href: '#', imageSrc: 'https://tailwindui.com/img/ecommerce-images/home-page-01-category-03.jpg' },
 ]
 
-export default async function CategoryPreview({data: categories}: {data: ICategory}) {
-    console.log(categories)
+export default async function CategoryPreview({ data: categories }: { data: ICategory }) {
+    // console.log(categories)
     return (
         <div className="bg-white">
             <div className="py-16 sm:py-24 xl:max-w-7xl xl:mx-auto xl:px-8">
@@ -42,7 +42,7 @@ export default async function CategoryPreview({data: categories}: {data: ICatego
                     <div className="-my-2">
                         <div className="box-content py-2 relative h-80 overflow-x-auto xl:overflow-visible">
                             <div className="absolute min-w-screen-xl px-4 flex space-x-8 sm:px-6 lg:px-8 xl:relative xl:px-0 xl:space-x-0 xl:grid xl:grid-cols-5 xl:gap-x-8">
-                                {categories.map((category: ICategory) => (
+                                {categories?.map((category: ICategory) => (
                                     <a
                                         key={category.name}
                                         href={`/category/${category.id}`}
